@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resize Image - Free Online Image Resizer | Online Tools Hub</title>
+    <meta name="description" content="Easily resize your images online to specific dimensions (pixels or percentage) for free. Perfect for social media, websites, and email attachments.">
+    <meta name="keywords" content="resize image, image resizer, change image dimensions, photo resizer, online image scaler, free image resizer">
+    <link rel="canonical" href="https://www.example.com/image-resizer">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #11244A;
+            --primary-dark: #0B1C3E;
+            --primary-darker: #061831;
+            --primary-darkest: #051024;
+            --background: #030A1C;
+            --text-light: #FFFFFF;
+            --text-muted: #CCCCCC;
+            --accent: #4A90E2;
+            --accent-hover: #3A7BC8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background-color: var(--background);
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--text-light);
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+        }
+        
+        /* Layout */
+        header, main, footer {
+            padding: 2rem;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        header h1 a {
+            color: var(--text-light);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin-top: 1rem;
+            gap: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: var(--text-muted);
+            font-weight: 500;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+        }
+        
+        nav ul li a:hover {
+            color: var(--text-light);
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Tool Section */
+        #tool-resize-image {
+            background: var(--primary-darkest);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        #tool-resize-image h2 {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-dark);
+        }
+        
+        /* Form Styles */
+        form {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: var(--primary-darker);
+            border-radius: 8px;
+        }
+        
+        form div {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        input[type="file"],
+        input[type="number"] {
+            width: 100%;
+            padding: 0.8rem;
+            background: var(--primary-dark);
+            border: 1px solid var(--primary);
+            border-radius: 4px;
+            color: var(--text-light);
+        }
+        
+        input[type="file"] {
+            cursor: pointer;
+        }
+        
+        input[type="file"]:hover {
+            border-color: var(--accent);
+        }
+        
+        input[type="number"] {
+            max-width: 200px;
+        }
+        
+        /* Checkbox Styles */
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+            width: 1.1em;
+            height: 1.1em;
+            accent-color: var(--accent);
+            cursor: pointer;
+        }
+        
+        button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        button:hover {
+            background: var(--accent-hover);
+        }
+        
+        /* Articles */
+        article {
+            background: var(--primary-darker);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--accent);
+        }
+        
+        article h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        ol, ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-darkest);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        footer p {
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header, main, footer {
+                padding: 1.5rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            #tool-resize-image {
+                padding: 1.5rem;
+            }
+            
+            form {
+                padding: 1rem;
+            }
+            
+            input[type="number"] {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="/">Online Tools Hub</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/#image-tools">Image Tools</a></li>
+                <li><a href="/#document-text-tools">Document/Text Tools</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="tool-resize-image">
+            <h2>Online Image Resizer</h2>
+            <p>Upload your image and specify the new dimensions in pixels or as a percentage to resize it.</p>
+
+            <form id="imageResizerForm" action="/resize-image-handler" method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="imageFileResize">Choose image to resize:</label>
+                    <input type="file" id="imageFileResize" name="imageFile" accept="image/*" required>
+                </div>
+                <div>
+                    <label for="newWidth">New Width (pixels):</label>
+                    <input type="number" id="newWidth" name="newWidth" min="1">
+                </div>
+                <div>
+                    <label for="newHeight">New Height (pixels):</label>
+                    <input type="number" id="newHeight" name="newHeight" min="1">
+                </div>
+                <div>
+                    <label for="scalePercentage">Or Scale by Percentage (%):</label>
+                    <input type="number" id="scalePercentage" name="scalePercentage" min="1" max="500">
+                </div>
+                <div>
+                    <input type="checkbox" id="aspectRatio" name="aspectRatio" checked>
+                    <label for="aspectRatio">Maintain Aspect Ratio</label>
+                </div>
+                <button type="submit">Resize Image</button>
+            </form>
+
+            <article id="how-to-use">
+                <h3>How to Resize Your Image:</h3>
+                <ol>
+                    <li>Upload your image file.</li>
+                    <li>Enter the desired width and/or height, or a scale percentage.</li>
+                    <li>Choose whether to maintain the aspect ratio.</li>
+                    <li>Click "Resize Image".</li>
+                    <li>Download your resized image.</li>
+                </ol>
+            </article>
+
+            <article id="features">
+                <h3>Features:</h3>
+                <ul>
+                    <li>Resize by pixels or percentage.</li>
+                    <li>Option to maintain aspect ratio.</li>
+                    <li>Supports various image formats.</li>
+                    <li>Simple and quick.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Online Tools Hub. All rights reserved.</p>
+        <p><a href="/#image-tools">Back to Image Tools</a> | <a href="/index.html">Home</a></p>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    const imageResizerForm = document.getElementById('imageResizerForm');
+    const imageFileInput = document.getElementById('imageFileResize');
+    const newWidthInput = document.getElementById('newWidth');
+    const newHeightInput = document.getElementById('newHeight');
+    const scalePercentageInput = document.getElementById('scalePercentage');
+    const aspectRatioCheckbox = document.getElementById('aspectRatio');
+    
+    // Store original dimensions when image is selected
+    let originalWidth = 0;
+    let originalHeight = 0;
+    let aspectRatio = 1;
+    
+    // Handle form submission
+    imageResizerForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const file = imageFileInput.files[0];
+        
+        if (!file) {
+            alert('Please select an image file first.');
+            return;
+        }
+        
+        // Determine resize method
+        if (scalePercentageInput.value && scalePercentageInput.value !== "") {
+            // Resize by percentage
+            const percentage = parseInt(scalePercentageInput.value);
+            if (isNaN(percentage) {
+                alert('Please enter a valid percentage.');
+                return;
+            }
+            
+            resizeImage(file, {
+                width: Math.round(originalWidth * percentage / 100),
+                height: Math.round(originalHeight * percentage / 100),
+                maintainAspectRatio: false // Not needed when scaling by percentage
+            });
+        } else {
+            // Resize by dimensions
+            const width = parseInt(newWidthInput.value);
+            const height = parseInt(newHeightInput.value);
+            
+            if (isNaN(width) && isNaN(height)) {
+                alert('Please enter either width, height, or a percentage to resize.');
+                return;
+            }
+            
+            const options = {
+                width: isNaN(width) ? null : width,
+                height: isNaN(height) ? null : height,
+                maintainAspectRatio: aspectRatioCheckbox.checked
+            };
+            
+            resizeImage(file, options);
+        }
+    });
+    
+    // When image is selected, get its dimensions
+    imageFileInput.addEventListener('change', function() {
+        const file = this.files[0];
+        if (!file) return;
+        
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const img = new Image();
+            img.onload = function() {
+                originalWidth = img.width;
+                originalHeight = img.height;
+                aspectRatio = originalWidth / originalHeight;
+                
+                // Display original dimensions
+                const infoDiv = document.createElement('div');
+                infoDiv.innerHTML = `<p>Original dimensions: ${originalWidth} × ${originalHeight} pixels</p>`;
+                infoDiv.style.marginTop = '10px';
+                infoDiv.style.color = getComputedStyle(document.documentElement).getPropertyValue('--text-muted');
+                
+                const existingInfo = imageFileInput.nextElementSibling;
+                if (existingInfo && existingInfo.tagName === 'DIV') {
+                    existingInfo.remove();
+                }
+                
+                imageFileInput.after(infoDiv);
+            };
+            img.src = event.target.result;
+        };
+        reader.readAsDataURL(file);
+    });
+    
+    // Maintain aspect ratio calculations
+    newWidthInput.addEventListener('input', function() {
+        if (aspectRatioCheckbox.checked && originalWidth && originalHeight) {
+            const newWidth = parseInt(this.value);
+            if (!isNaN(newWidth)) {
+                newHeightInput.value = Math.round(newWidth / aspectRatio);
+            }
+        }
+    });
+    
+    newHeightInput.addEventListener('input', function() {
+        if (aspectRatioCheckbox.checked && originalWidth && originalHeight) {
+            const newHeight = parseInt(this.value);
+            if (!isNaN(newHeight)) {
+                newWidthInput.value = Math.round(newHeight * aspectRatio);
+            }
+        }
+    });
+    
+    // Clear percentage when dimensions are changed
+    newWidthInput.addEventListener('input', clearPercentage);
+    newHeightInput.addEventListener('input', clearPercentage);
+    
+    // Clear dimensions when percentage is changed
+    scalePercentageInput.addEventListener('input', function() {
+        if (this.value && this.value !== "") {
+            newWidthInput.value = "";
+            newHeightInput.value = "";
+        }
+    });
+    
+    function clearPercentage() {
+        if (newWidthInput.value || newHeightInput.value) {
+            scalePercentageInput.value = "";
+        }
+    }
+    
+    // Drag and drop functionality
+    const dropArea = document.getElementById('tool-resize-image');
+    
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, preventDefaults, false);
+    });
+    
+    function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    
+    ['dragenter', 'dragover'].forEach(eventName => {
+        dropArea.addEventListener(eventName, highlight, false);
+    });
+    
+    ['dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, unhighlight, false);
+    });
+    
+    function highlight() {
+        dropArea.style.border = '2px dashed ' + getComputedStyle(document.documentElement).getPropertyValue('--accent');
+    }
+    
+    function unhighlight() {
+        dropArea.style.border = 'none';
+    }
+    
+    dropArea.addEventListener('drop', handleDrop, false);
+    
+    function handleDrop(e) {
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        
+        if (files.length) {
+            const file = files[0];
+            if (file.type.match('image.*')) {
+                imageFileInput.files = files;
+                // Trigger the change event to get dimensions
+                const event = new Event('change');
+                imageFileInput.dispatchEvent(event);
+            } else {
+                alert('Please drop an image file.');
+            }
+        }
+    }
+    
+    // Image resizing function
+    function resizeImage(file, options) {
+        const reader = new FileReader();
+        
+        reader.onload = function(event) {
+            const img = new Image();
+            img.onload = function() {
+                // Calculate new dimensions
+                let width, height;
+                
+                if (options.maintainAspectRatio) {
+                    if (options.width && !options.height) {
+                        // Only width provided
+                        width = options.width;
+                        height = Math.round(width / aspectRatio);
+                    } else if (!options.width && options.height) {
+                        // Only height provided
+                        height = options.height;
+                        width = Math.round(height * aspectRatio);
+                    } else {
+                        // Both provided - use width and adjust height to maintain ratio
+                        width = options.width;
+                        height = Math.round(width / aspectRatio);
+                    }
+                } else {
+                    // Don't maintain aspect ratio
+                    width = options.width || img.width;
+                    height = options.height || img.height;
+                }
+                
+                // Create canvas
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Set canvas dimensions
+                canvas.width = width;
+                canvas.height = height;
+                
+                // Draw image on canvas with new dimensions
+                ctx.drawImage(img, 0, 0, width, height);
+                
+                // Create download link
+                canvas.toBlob(function(blob) {
+                    const downloadLink = document.createElement('a');
+                    downloadLink.href = URL.createObjectURL(blob);
+                    downloadLink.download = 'resized_' + file.name;
+                    
+                    // Display resized image info
+                    const resultDiv = document.createElement('div');
+                    resultDiv.style.marginTop = '20px';
+                    resultDiv.style.padding = '15px';
+                    resultDiv.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-dark');
+                    resultDiv.style.borderRadius = '4px';
+                    
+                    resultDiv.innerHTML = `
+                        <h3 style="color: ${getComputedStyle(document.documentElement).getPropertyValue('--accent')}">Resize Results</h3>
+                        <p>Original dimensions: ${originalWidth} × ${originalHeight} pixels</p>
+                        <p>New dimensions: ${width} × ${height} pixels</p>
+                        <button id="downloadBtn" style="margin-top: 10px;">Download Resized Image</button>
+                    `;
+                    
+                    // Remove previous result if exists
+                    const previousResult = document.querySelector('#resizeResult');
+                    if (previousResult) {
+                        previousResult.remove();
+                    }
+                    
+                    resultDiv.id = 'resizeResult';
+                    imageResizerForm.after(resultDiv);
+                    
+                    // Add download functionality
+                    document.getElementById('downloadBtn').addEventListener('click', function() {
+                        downloadLink.click();
+                    });
+                }, file.type, 0.9); // Use original file type and 90% quality
+            };
+            
+            img.src = event.target.result;
+        };
+        
+        reader.readAsDataURL(file);
+    }
+});
+    </script>
+</body>
+</html>

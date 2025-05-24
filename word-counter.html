@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter - Free Online Text Analyzer | Online Tools Hub</title>
+    <meta name="description" content="Count words, characters, sentences, and paragraphs in your text online for free. Paste your text or upload a document for instant analysis.">
+    <meta name="keywords" content="word counter, character counter, sentence counter, paragraph counter, text analyzer, online word count, free word counter">
+    <link rel="canonical" href="https://www.example.com/word-counter">
+    <style>
+        :root {
+            --primary: #11244A;
+            --primary-dark: #0B1C3E;
+            --primary-darker: #061831;
+            --primary-darkest: #051024;
+            --background: #030A1C;
+            --text-light: #FFFFFF;
+            --text-muted: #CCCCCC;
+            --accent: #4A90E2;
+            --accent-hover: #3A7BC8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background-color: var(--background);
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--text-light);
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+        }
+        
+        /* Layout */
+        header, main, footer {
+            padding: 2rem;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        header h1 a {
+            color: var(--text-light);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin-top: 1rem;
+            gap: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: var(--text-muted);
+            font-weight: 500;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+        }
+        
+        nav ul li a:hover {
+            color: var(--text-light);
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Tool Section */
+        #tool-word-counter {
+            background: var(--primary-darkest);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        #tool-word-counter h2 {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-dark);
+        }
+        
+        /* Form Styles */
+        form {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: var(--primary-darker);
+            border-radius: 8px;
+        }
+        
+        textarea {
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary-dark);
+            border: 1px solid var(--primary);
+            border-radius: 4px;
+            color: var(--text-light);
+            resize: vertical;
+            min-height: 200px;
+            font-family: inherit;
+        }
+        
+        textarea:focus {
+            border-color: var(--accent);
+            outline: none;
+        }
+        
+        button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        button:hover {
+            background: var(--accent-hover);
+        }
+        
+        /* Results */
+        #results {
+            background: var(--primary-darker);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--accent);
+        }
+        
+        #results p {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        #results span {
+            font-weight: bold;
+            color: var(--accent);
+        }
+        
+        /* Articles */
+        article {
+            background: var(--primary-darker);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--accent);
+        }
+        
+        article h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        ol, ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-darkest);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        footer p {
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header, main, footer {
+                padding: 1.5rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            #tool-word-counter {
+                padding: 1.5rem;
+            }
+            
+            form {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="/">Online Tools Hub</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/#image-tools">Image Tools</a></li>
+                <li><a href="/#document-text-tools">Document/Text Tools</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="tool-word-counter">
+            <h2>Online Word Counter & Text Analyzer</h2>
+            <p>Paste your text into the box below or upload a document to count words, characters, sentences, and paragraphs.</p>
+
+            <form id="wordCounterForm">
+                <div>
+                    <label for="textContent">Paste your text here:</label>
+                    <textarea id="textContent" name="textContent" placeholder="Start typing or paste your text..."></textarea>
+                </div>
+                <button type="button" id="countButton">Count Words</button>
+            </form>
+
+            <article id="results">
+                <h3>Results:</h3>
+                <p>Words: <span id="wordCount">0</span></p>
+                <p>Characters (with spaces): <span id="charCountWithSpaces">0</span></p>
+                <p>Characters (no spaces): <span id="charCountNoSpaces">0</span></p>
+                <p>Sentences: <span id="sentenceCount">0</span></p>
+                <p>Paragraphs: <span id="paragraphCount">0</span></p>
+            </article>
+
+            <article id="how-to-use">
+                <h3>How to Use the Word Counter:</h3>
+                <ol>
+                    <li>Type or paste your text directly into the text area.</li>
+                    <li>(Alternatively, provide an option to upload a document.)</li>
+                    <li>The counts will update automatically or after clicking a "Count" button.</li>
+                </ol>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Online Tools Hub. All rights reserved.</p>
+        <p><a href="/#document-text-tools">Back to Document/Text Tools</a> | <a href="/index.html">Home</a></p>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    const textArea = document.getElementById('textContent');
+    const countButton = document.getElementById('countButton');
+    const wordCountEl = document.getElementById('wordCount');
+    const charCountWithSpacesEl = document.getElementById('charCountWithSpaces');
+    const charCountNoSpacesEl = document.getElementById('charCountNoSpaces');
+    const sentenceCountEl = document.getElementById('sentenceCount');
+    const paragraphCountEl = document.getElementById('paragraphCount');
+    
+    // Count automatically as user types (with debounce)
+    textArea.addEventListener('input', debounce(updateCounts, 300));
+    
+    // Also count when button is clicked
+    countButton.addEventListener('click', updateCounts);
+    
+    // Initial count
+    updateCounts();
+    
+    // Debounce function to limit how often a function is called
+    function debounce(func, wait) {
+        let timeout;
+        return function() {
+            const context = this, args = arguments;
+            clearTimeout(timeout);
+            timeout = setTimeout(function() {
+                func.apply(context, args);
+            }, wait);
+        };
+    }
+    
+    // Main counting function
+    function updateCounts() {
+        const text = textArea.value;
+        
+        // Word count (split by whitespace and filter out empty strings)
+        const words = text.trim() === '' ? [] : text.trim().split(/\s+/);
+        wordCountEl.textContent = words.length;
+        
+        // Character counts
+        charCountWithSpacesEl.textContent = text.length;
+        charCountNoSpacesEl.textContent = text.replace(/\s+/g, '').length;
+        
+        // Sentence count (split by punctuation followed by space or end of string)
+        const sentences = text.trim() === '' ? [] : text.split(/[.!?]+(?=\s|$)/);
+        sentenceCountEl.textContent = sentences.length - (text.trim() === '' ? 0 : 1);
+        
+        // Paragraph count (split by newlines and filter out empty paragraphs)
+        const paragraphs = text.trim() === '' ? [] : text.split(/\n+/).filter(p => p.trim() !== '');
+        paragraphCountEl.textContent = paragraphs.length;
+    }
+    
+    // Optional: Add file upload functionality
+    function setupFileUpload() {
+        const fileInput = document.createElement('input');
+        fileInput.type = 'file';
+        fileInput.accept = '.txt,.doc,.docx,.pdf,.rtf';
+        fileInput.style.display = 'none';
+        
+        const uploadButton = document.createElement('button');
+        uploadButton.type = 'button';
+        uploadButton.textContent = 'Upload Document';
+        uploadButton.style.marginLeft = '10px';
+        uploadButton.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-dark');
+        
+        uploadButton.addEventListener('click', function() {
+            fileInput.click();
+        });
+        
+        fileInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            
+            reader.onload = function(e) {
+                // Handle different file types
+                if (file.name.endsWith('.pdf')) {
+                    // PDF handling would require pdf.js or similar library
+                    alert('PDF text extraction requires additional libraries. Please use plain text or DOCX files.');
+                } else if (file.name.endsWith('.docx')) {
+                    // DOCX handling would require docx.js or similar library
+                    alert('DOCX text extraction requires additional libraries. Please use plain text files.');
+                } else {
+                    // Plain text files
+                    textArea.value = e.target.result;
+                    updateCounts();
+                }
+            };
+            
+            if (file.name.endsWith('.pdf') || file.name.endsWith('.docx')) {
+                // For demo purposes, we'll just show the file name
+                textArea.value = `[File: ${file.name} - Please use plain text for this demo]`;
+                updateCounts();
+            } else {
+                reader.readAsText(file);
+            }
+        });
+        
+        // Insert the upload button after the count button
+        countButton.parentNode.insertBefore(uploadButton, countButton.nextSibling);
+    }
+    
+    // Uncomment to enable file upload functionality
+    // setupFileUpload();
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Formatter & Validator - Online JSON Beautifier | Online Tools Hub</title>
+    <meta name="description" content="Validate, format, and beautify your JSON data online for free. Makes JSON easy to read and debug. Copy and paste your JSON code.">
+    <meta name="keywords" content="json formatter, json beautifier, json validator, format json, beautify json, validate json, online json tool, free json formatter">
+    <link rel="canonical" href="https://www.example.com/json-formatter">
+    <style>
+        :root {
+            --primary: #11244A;
+            --primary-dark: #0B1C3E;
+            --primary-darker: #061831;
+            --primary-darkest: #051024;
+            --background: #030A1C;
+            --text-light: #FFFFFF;
+            --text-muted: #CCCCCC;
+            --accent: #4A90E2;
+            --accent-hover: #3A7BC8;
+            --valid: rgba(0, 200, 0, 0.1);
+            --invalid: rgba(200, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background-color: var(--background);
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--text-light);
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+        }
+        
+        /* Layout */
+        header, main, footer {
+            padding: 2rem;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        header h1 a {
+            color: var(--text-light);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin-top: 1rem;
+            gap: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: var(--text-muted);
+            font-weight: 500;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+        }
+        
+        nav ul li a:hover {
+            color: var(--text-light);
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Tool Section */
+        #tool-json-formatter {
+            background: var(--primary-darkest);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        #tool-json-formatter h2 {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-dark);
+        }
+        
+        /* Form Styles */
+        form {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: var(--primary-darker);
+            border-radius: 8px;
+        }
+        
+        textarea {
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary-dark);
+            border: 1px solid var(--primary);
+            border-radius: 4px;
+            color: var(--text-light);
+            resize: vertical;
+            min-height: 200px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        textarea:focus {
+            border-color: var(--accent);
+            outline: none;
+        }
+        
+        button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-right: 1rem;
+            margin-top: 1rem;
+        }
+        
+        button:hover {
+            background: var(--accent-hover);
+        }
+        
+        /* Output Area */
+        #output-area {
+            margin-top: 2rem;
+        }
+        
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background: var(--primary-darker);
+            padding: 1rem;
+            border-radius: 4px;
+            border-left: 4px solid var(--accent);
+            overflow-x: auto;
+        }
+        
+        #jsonOutput {
+            font-family: 'Courier New', Courier, monospace;
+            color: var(--text-light);
+        }
+        
+        #validationMessage {
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 4px;
+            display: none;
+        }
+        
+        .valid {
+            background-color: var(--valid);
+            border-left: 4px solid green;
+            display: block;
+        }
+        
+        .invalid {
+            background-color: var(--invalid);
+            border-left: 4px solid red;
+            display: block;
+        }
+        
+        /* Articles */
+        article {
+            background: var(--primary-darker);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--accent);
+        }
+        
+        article h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        ol, ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-darkest);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        footer p {
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header, main, footer {
+                padding: 1.5rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            #tool-json-formatter {
+                padding: 1.5rem;
+            }
+            
+            form {
+                padding: 1rem;
+            }
+            
+            button {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="/">Online Tools Hub</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/#image-tools">Image Tools</a></li>
+                <li><a href="/#document-text-tools">Document/Text Tools</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="tool-json-formatter">
+            <h2>Online JSON Formatter & Validator</h2>
+            <p>Paste your JSON data into the editor below to validate and format it for better readability.</p>
+
+            <form id="jsonFormatterForm">
+                <div>
+                    <label for="jsonInput">Enter your JSON data:</label>
+                    <textarea id="jsonInput" name="jsonInput" placeholder='{ "key": "value", "number": 123 }'></textarea>
+                </div>
+                <button type="button" id="formatButton">Format JSON</button>
+                <button type="button" id="validateButton">Validate JSON</button>
+                <button type="button" id="clearButton">Clear</button>
+            </form>
+
+            <article id="output-area">
+                <h3>Formatted JSON / Validation Result:</h3>
+                <pre><code id="jsonOutput">Your formatted JSON will appear here...</code></pre>
+                <p id="validationMessage"></p>
+            </article>
+
+            <article id="how-to-use">
+                <h3>How to Use the JSON Formatter:</h3>
+                <ol>
+                    <li>Paste your unformatted or minified JSON into the input area.</li>
+                    <li>Click "Format JSON" to beautify it or "Validate JSON" to check its syntax.</li>
+                    <li>The formatted JSON or validation status will appear below.</li>
+                    <li>You can then copy the formatted JSON.</li>
+                </ol>
+            </article>
+
+            <article id="features">
+                <h3>Features:</h3>
+                <ul>
+                    <li>Cleans and beautifies messy JSON code.</li>
+                    <li>Validates JSON syntax and highlights errors.</li>
+                    <li>Supports various indentation levels (optional feature).</li>
+                    <li>Easy copy-paste functionality.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Online Tools Hub. All rights reserved.</p>
+        <p><a href="/#document-text-tools">Back to Document/Text Tools</a> | <a href="/index.html">Home</a></p>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    const jsonInput = document.getElementById('jsonInput');
+    const jsonOutput = document.getElementById('jsonOutput');
+    const validationMessage = document.getElementById('validationMessage');
+    const formatButton = document.getElementById('formatButton');
+    const validateButton = document.getElementById('validateButton');
+    const clearButton = document.getElementById('clearButton');
+    
+    // Initialize with empty output
+    jsonOutput.textContent = '';
+    validationMessage.textContent = '';
+    validationMessage.className = '';
+    
+    // Format JSON button click handler
+    formatButton.addEventListener('click', function() {
+        try {
+            const jsonObj = JSON.parse(jsonInput.value);
+            const formattedJson = JSON.stringify(jsonObj, null, 4);
+            jsonOutput.textContent = formattedJson;
+            validationMessage.textContent = '✅ Valid JSON - Formatted successfully';
+            validationMessage.className = 'valid';
+        } catch (error) {
+            jsonOutput.textContent = jsonInput.value;
+            validationMessage.textContent = `❌ Invalid JSON: ${error.message}`;
+            validationMessage.className = 'invalid';
+        }
+    });
+    
+    // Validate JSON button click handler
+    validateButton.addEventListener('click', function() {
+        try {
+            JSON.parse(jsonInput.value);
+            validationMessage.textContent = '✅ Valid JSON';
+            validationMessage.className = 'valid';
+            jsonOutput.textContent = jsonInput.value;
+        } catch (error) {
+            validationMessage.textContent = `❌ Invalid JSON: ${error.message}`;
+            validationMessage.className = 'invalid';
+            jsonOutput.textContent = jsonInput.value;
+            
+            // Highlight error position if possible
+            highlightErrorPosition(error);
+        }
+    });
+    
+    // Clear button click handler
+    clearButton.addEventListener('click', function() {
+        jsonInput.value = '';
+        jsonOutput.textContent = 'Your formatted JSON will appear here...';
+        validationMessage.textContent = '';
+        validationMessage.className = '';
+    });
+    
+    // Syntax highlighting for JSON output
+    function highlightJson(jsonString) {
+        // Simple syntax highlighting for JSON
+        return jsonString
+            .replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)/g, function(match) {
+                let cls = 'number';
+                if (/^"/.test(match)) {
+                    if (/:$/.test(match)) {
+                        cls = 'key';
+                    } else {
+                        cls = 'string';
+                    }
+                } else if (/true|false/.test(match)) {
+                    cls = 'boolean';
+                } else if (/null/.test(match)) {
+                    cls = 'null';
+                }
+                return '<span class="' + cls + '">' + match + '</span>';
+            });
+    }
+    
+    // Highlight error position in input
+    function highlightErrorPosition(error) {
+        if (!error.message.includes('position')) return;
+        
+        // Extract position from error message
+        const positionMatch = error.message.match(/position (\d+)/);
+        if (!positionMatch) return;
+        
+        const position = parseInt(positionMatch[1]);
+        const input = jsonInput.value;
+        
+        // Find line and column
+        let line = 1, col = 1;
+        for (let i = 0; i < position && i < input.length; i++) {
+            if (input[i] === '\n') {
+                line++;
+                col = 1;
+            } else {
+                col++;
+            }
+        }
+        
+        // Update error message with position info
+        validationMessage.textContent += ` (Line ${line}, Column ${col})`;
+        
+        // Optional: Scroll to error position
+        // This would require more complex handling to actually highlight in textarea
+    }
+    
+    // Optional: Auto-format on paste with debounce
+    let pasteTimeout;
+    jsonInput.addEventListener('paste', function() {
+        clearTimeout(pasteTimeout);
+        pasteTimeout = setTimeout(function() {
+            formatButton.click();
+        }, 500);
+    });
+    
+    // Optional: Add copy button
+    const copyButton = document.createElement('button');
+    copyButton.textContent = 'Copy Formatted JSON';
+    copyButton.addEventListener('click', function() {
+        if (!jsonOutput.textContent || jsonOutput.textContent === 'Your formatted JSON will appear here...') {
+            alert('No formatted JSON to copy!');
+            return;
+        }
+        
+        navigator.clipboard.writeText(jsonOutput.textContent)
+            .then(() => {
+                const originalText = copyButton.textContent;
+                copyButton.textContent = 'Copied!';
+                setTimeout(() => {
+                    copyButton.textContent = originalText;
+                }, 2000);
+            })
+            .catch(err => {
+                console.error('Failed to copy: ', err);
+                alert('Failed to copy JSON to clipboard');
+            });
+    });
+    
+    // Insert copy button after clear button
+    clearButton.parentNode.insertBefore(copyButton, clearButton.nextSibling);
+    
+    // Optional: Add indent level selector
+    const indentSelect = document.createElement('select');
+    indentSelect.innerHTML = `
+        <option value="2">2 spaces</option>
+        <option value="4" selected>4 spaces</option>
+        <option value="tab">Tab</option>
+    `;
+    indentSelect.style.marginRight = '1rem';
+    indentSelect.style.padding = '0.6rem';
+    indentSelect.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-dark');
+    indentSelect.style.border = '1px solid ' + getComputedStyle(document.documentElement).getPropertyValue('--primary');
+    indentSelect.style.borderRadius = '4px';
+    indentSelect.style.color = getComputedStyle(document.documentElement).getPropertyValue('--text-light');
+    
+    // Update format function to use selected indent
+    const originalFormatHandler = formatButton.onclick;
+    formatButton.onclick = function() {
+        const indentValue = indentSelect.value;
+        const indent = indentValue === 'tab' ? '\t' : parseInt(indentValue);
+        
+        try {
+            const jsonObj = JSON.parse(jsonInput.value);
+            const formattedJson = JSON.stringify(jsonObj, null, indent);
+            jsonOutput.textContent = formattedJson;
+            validationMessage.textContent = '✅ Valid JSON - Formatted successfully';
+            validationMessage.className = 'valid';
+        } catch (error) {
+            originalFormatHandler.call(this);
+        }
+    };
+    
+    // Insert indent selector before format button
+    formatButton.parentNode.insertBefore(indentSelect, formatButton);
+    
+    // Optional: Add sample JSON button
+    const sampleButton = document.createElement('button');
+    sampleButton.textContent = 'Load Sample JSON';
+    sampleButton.addEventListener('click', function() {
+        jsonInput.value = `{
+  "name": "John Doe",
+  "age": 30,
+  "isActive": true,
+  "address": {
+    "street": "123 Main St",
+    "city": "New York",
+    "zip": "10001"
+  },
+  "hobbies": ["reading", "hiking", "coding"],
+  "projects": [
+    {
+      "name": "Website Redesign",
+      "status": "completed"
+    },
+    {
+      "name": "Mobile App",
+      "status": "in-progress"
+    }
+  ]
+}`;
+    });
+    
+    // Insert sample button after copy button
+    copyButton.parentNode.insertBefore(sampleButton, copyButton.nextSibling);
+});
+    </script>
+</body>
+</html>

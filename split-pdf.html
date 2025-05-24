@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split PDF - Free Online PDF Splitter | Online Tools Hub</title>
+    <meta name="description" content="Split a PDF file into multiple smaller PDFs or extract specific pages for free. Our online PDF splitter is fast and easy to use.">
+    <meta name="keywords" content="split pdf, pdf splitter, extract pdf pages, divide pdf, online pdf cutter, free pdf splitter">
+    <link rel="canonical" href="https://www.example.com/pdf-splitter">
+    <style>
+        :root {
+            --primary: #11244A;
+            --primary-dark: #0B1C3E;
+            --primary-darker: #061831;
+            --primary-darkest: #051024;
+            --background: #030A1C;
+            --text-light: #FFFFFF;
+            --text-muted: #CCCCCC;
+            --accent: #4A90E2;
+            --accent-hover: #3A7BC8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background-color: var(--background);
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--text-light);
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+        }
+        
+        /* Layout */
+        header, main, footer {
+            padding: 2rem;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        header h1 a {
+            color: var(--text-light);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin-top: 1rem;
+            gap: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: var(--text-muted);
+            font-weight: 500;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+        }
+        
+        nav ul li a:hover {
+            color: var(--text-light);
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Tool Section */
+        #tool-split-pdf {
+            background: var(--primary-darkest);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        #tool-split-pdf h2 {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-dark);
+        }
+        
+        /* Form Styles */
+        form {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: var(--primary-darker);
+            border-radius: 8px;
+        }
+        
+        form div {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        input[type="file"],
+        select,
+        input[type="text"] {
+            width: 100%;
+            padding: 0.8rem;
+            background: var(--primary-dark);
+            border: 1px solid var(--primary);
+            border-radius: 4px;
+            color: var(--text-light);
+        }
+        
+        input[type="file"] {
+            cursor: pointer;
+        }
+        
+        input[type="file"]:hover,
+        select:hover,
+        input[type="text"]:hover {
+            border-color: var(--accent);
+        }
+        
+        select {
+            max-width: 100%;
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234A90E2'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0.7rem center;
+            background-size: 1rem;
+        }
+        
+        #pageSelection {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: var(--primary);
+            border-radius: 4px;
+            display: none;
+        }
+        
+        button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        button:hover {
+            background: var(--accent-hover);
+        }
+        
+        /* Articles */
+        article {
+            background: var(--primary-darker);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--accent);
+        }
+        
+        article h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        ol, ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-darkest);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        footer p {
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header, main, footer {
+                padding: 1.5rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            #tool-split-pdf {
+                padding: 1.5rem;
+            }
+            
+            form {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="/">Online Tools Hub</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/#image-tools">Image Tools</a></li>
+                <li><a href="/#document-text-tools">Document/Text Tools</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="tool-split-pdf">
+            <h2>Online PDF Splitter</h2>
+            <p>Upload your PDF file and choose how you want to split it: extract all pages, select specific pages, or split into ranges.</p>
+
+            <form id="pdfSplitterForm" action="/split-pdf-handler" method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="pdfFileSplit">Choose PDF file to split:</label>
+                    <input type="file" id="pdfFileSplit" name="pdfFile" accept="application/pdf" required>
+                </div>
+                <div>
+                    <label for="splitOption">Split Option:</label>
+                    <select id="splitOption" name="splitOption">
+                        <option value="all">Extract all pages into separate PDFs</option>
+                        <option value="select">Extract specific pages</option>
+                        <option value="ranges">Split by page ranges</option>
+                    </select>
+                </div>
+                <div id="pageSelection">
+                    <label for="pagesToExtract">Pages to extract (e.g., 1,3,5-7):</label>
+                    <input type="text" id="pagesToExtract" name="pagesToExtract" placeholder="e.g., 1, 3, 5-7">
+                </div>
+                <button type="submit">Split PDF</button>
+            </form>
+
+            <article id="how-to-use">
+                <h3>How to Split a PDF:</h3>
+                <ol>
+                    <li>Upload your PDF file.</li>
+                    <li>Choose your desired split option (e.g., extract specific pages).</li>
+                    <li>If applicable, enter the page numbers or ranges.</li>
+                    <li>Click "Split PDF".</li>
+                    <li>Download your new PDF files (often as a ZIP archive).</li>
+                </ol>
+            </article>
+
+            <article id="features">
+                <h3>Features:</h3>
+                <ul>
+                    <li>Split PDF into single pages.</li>
+                    <li>Extract specific pages by number.</li>
+                    <li>Split by custom page ranges.</li>
+                    <li>Preview pages before splitting (advanced feature).</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Online Tools Hub. All rights reserved.</p>
+        <p><a href="/#document-text-tools">Back to Document/Text Tools</a> | <a href="/index.html">Home</a></p>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    const pdfSplitterForm = document.getElementById('pdfSplitterForm');
+    const pdfFileInput = document.getElementById('pdfFileSplit');
+    const splitOptionSelect = document.getElementById('splitOption');
+    const pageSelectionDiv = document.getElementById('pageSelection');
+    const pagesToExtractInput = document.getElementById('pagesToExtract');
+    let pdfDoc = null;
+    let pageCount = 0;
+    
+    // Load PDF-lib dynamically
+    const script = document.createElement('script');
+    script.src = 'https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js';
+    script.onload = initializeApp;
+    document.body.appendChild(script);
+    
+    // Load JSZip for creating zip archives
+    const jszipScript = document.createElement('script');
+    jszipScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js';
+    document.body.appendChild(jszipScript);
+    
+    function initializeApp() {
+        // Show/hide page selection based on split option
+        splitOptionSelect.addEventListener('change', function() {
+            if (this.value === 'select' || this.value === 'ranges') {
+                pageSelectionDiv.style.display = 'block';
+                pagesToExtractInput.placeholder = this.value === 'select' ? 
+                    'e.g., 1, 3, 5' : 'e.g., 1-3, 5-7';
+            } else {
+                pageSelectionDiv.style.display = 'none';
+            }
+        });
+        
+        // Handle file selection
+        pdfFileInput.addEventListener('change', async function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            
+            try {
+                const arrayBuffer = await file.arrayBuffer();
+                pdfDoc = await PDFLib.PDFDocument.load(arrayBuffer);
+                pageCount = pdfDoc.getPageCount();
+                
+                // Show page count info
+                const fileInfo = document.createElement('p');
+                fileInfo.textContent = `Loaded PDF with ${pageCount} pages`;
+                fileInfo.style.marginTop = '10px';
+                fileInfo.style.color = getComputedStyle(document.documentElement).getPropertyValue('--text-muted');
+                
+                const existingInfo = pdfFileInput.nextElementSibling;
+                if (existingInfo && existingInfo.tagName === 'P') {
+                    existingInfo.remove();
+                }
+                
+                pdfFileInput.after(fileInfo);
+            } catch (error) {
+                console.error('Error loading PDF:', error);
+                alert('Error loading PDF. Please make sure it is a valid PDF file.');
+            }
+        });
+        
+        // Handle form submission
+        pdfSplitterForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            if (!pdfDoc) {
+                alert('Please select a PDF file first.');
+                return;
+            }
+            
+            const splitOption = splitOptionSelect.value;
+            
+            try {
+                switch(splitOption) {
+                    case 'all':
+                        await splitAllPages();
+                        break;
+                    case 'select':
+                        await extractSelectedPages();
+                        break;
+                    case 'ranges':
+                        await splitByRanges();
+                        break;
+                    default:
+                        alert('Invalid split option selected.');
+                }
+            } catch (error) {
+                console.error('Error splitting PDF:', error);
+                alert('An error occurred while splitting the PDF. Please try again.');
+            }
+        });
+        
+        // Drag and drop functionality
+        setupDragAndDrop();
+    }
+    
+    // Split each page into a separate PDF
+    async function splitAllPages() {
+        const zip = new JSZip();
+        
+        for (let i = 0; i < pageCount; i++) {
+            const newPdf = await PDFLib.PDFDocument.create();
+            const [page] = await newPdf.copyPages(pdfDoc, [i]);
+            newPdf.addPage(page);
+            
+            const pdfBytes = await newPdf.save();
+            const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+            
+            // Add to zip
+            zip.file(`page_${i + 1}.pdf`, blob);
+        }
+        
+        // Generate zip file
+        const zipContent = await zip.generateAsync({ type: 'blob' });
+        downloadFile(zipContent, 'split_pages.zip', 'ZIP archive containing all pages');
+    }
+    
+    // Extract specific pages
+    async function extractSelectedPages() {
+        const pagesInput = pagesToExtractInput.value.trim();
+        if (!pagesInput) {
+            alert('Please enter pages to extract.');
+            return;
+        }
+        
+        const pageNumbers = parsePageNumbers(pagesInput);
+        if (!pageNumbers || pageNumbers.length === 0) {
+            alert('Invalid page numbers. Please enter numbers like "1,3,5" or "1-3,5".');
+            return;
+        }
+        
+        // Validate page numbers
+        for (const num of pageNumbers) {
+            if (num < 1 || num > pageCount) {
+                alert(`Page ${num} is out of range. The PDF has ${pageCount} pages.`);
+                return;
+            }
+        }
+        
+        if (pageNumbers.length === 1) {
+            // Single page - download as PDF
+            const newPdf = await PDFLib.PDFDocument.create();
+            const [page] = await newPdf.copyPages(pdfDoc, [pageNumbers[0] - 1]);
+            newPdf.addPage(page);
+            
+            const pdfBytes = await newPdf.save();
+            const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+            downloadFile(blob, `page_${pageNumbers[0]}.pdf`, `Extracted page ${pageNumbers[0]}`);
+        } else {
+            // Multiple pages - create zip
+            const zip = new JSZip();
+            
+            for (const num of pageNumbers) {
+                const newPdf = await PDFLib.PDFDocument.create();
+                const [page] = await newPdf.copyPages(pdfDoc, [num - 1]);
+                newPdf.addPage(page);
+                
+                const pdfBytes = await newPdf.save();
+                const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+                zip.file(`page_${num}.pdf`, blob);
+            }
+            
+            const zipContent = await zip.generateAsync({ type: 'blob' });
+            downloadFile(zipContent, 'extracted_pages.zip', 'ZIP archive containing selected pages');
+        }
+    }
+    
+    // Split by page ranges
+    async function splitByRanges() {
+        const rangesInput = pagesToExtractInput.value.trim();
+        if (!rangesInput) {
+            alert('Please enter page ranges to split by.');
+            return;
+        }
+        
+        const ranges = parsePageRanges(rangesInput);
+        if (!ranges || ranges.length === 0) {
+            alert('Invalid page ranges. Please enter ranges like "1-3,5-7".');
+            return;
+        }
+        
+        // Validate ranges
+        for (const range of ranges) {
+            if (range.start < 1 || range.end > pageCount) {
+                alert(`Range ${range.start}-${range.end} is invalid. The PDF has ${pageCount} pages.`);
+                return;
+            }
+            if (range.start > range.end) {
+                alert(`Invalid range ${range.start}-${range.end}. Start must be ≤ end.`);
+                return;
+            }
+        }
+        
+        if (ranges.length === 1) {
+            // Single range - download as PDF
+            const range = ranges[0];
+            const newPdf = await PDFLib.PDFDocument.create();
+            const pageIndices = Array.from({length: range.end - range.start + 1}, (_, i) => range.start - 1 + i);
+            const pages = await newPdf.copyPages(pdfDoc, pageIndices);
+            pages.forEach(page => newPdf.addPage(page));
+            
+            const pdfBytes = await newPdf.save();
+            const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+            downloadFile(blob, `pages_${range.start}-${range.end}.pdf`, `Pages ${range.start}-${range.end}`);
+        } else {
+            // Multiple ranges - create zip
+            const zip = new JSZip();
+            
+            for (const range of ranges) {
+                const newPdf = await PDFLib.PDFDocument.create();
+                const pageIndices = Array.from({length: range.end - range.start + 1}, (_, i) => range.start - 1 + i);
+                const pages = await newPdf.copyPages(pdfDoc, pageIndices);
+                pages.forEach(page => newPdf.addPage(page));
+                
+                const pdfBytes = await newPdf.save();
+                const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+                zip.file(`pages_${range.start}-${range.end}.pdf`, blob);
+            }
+            
+            const zipContent = await zip.generateAsync({ type: 'blob' });
+            downloadFile(zipContent, 'split_ranges.zip', 'ZIP archive containing page ranges');
+        }
+    }
+    
+    // Parse individual page numbers (e.g., "1,3,5")
+    function parsePageNumbers(input) {
+        const parts = input.split(',').map(part => part.trim());
+        const numbers = [];
+        
+        for (const part of parts) {
+            if (part.includes('-')) {
+                // Handle ranges in select mode (treat as individual pages)
+                const rangeParts = part.split('-').map(p => parseInt(p.trim()));
+                if (rangeParts.length !== 2 || isNaN(rangeParts[0]) continue;
+                
+                numbers.push(rangeParts[0]);
+                if (!isNaN(rangeParts[1])) {
+                    numbers.push(rangeParts[1]);
+                }
+            } else {
+                const num = parseInt(part);
+                if (!isNaN(num)) numbers.push(num);
+            }
+        }
+        
+        // Remove duplicates and sort
+        return [...new Set(numbers)].sort((a, b) => a - b);
+    }
+    
+    // Parse page ranges (e.g., "1-3,5-7")
+    function parsePageRanges(input) {
+        const parts = input.split(',').map(part => part.trim());
+        const ranges = [];
+        
+        for (const part of parts) {
+            if (part.includes('-')) {
+                const rangeParts = part.split('-').map(p => parseInt(p.trim()));
+                if (rangeParts.length !== 2 || isNaN(rangeParts[0]) continue;
+                
+                const start = rangeParts[0];
+                const end = isNaN(rangeParts[1]) ? start : rangeParts[1];
+                ranges.push({ start, end });
+            } else {
+                const num = parseInt(part);
+                if (!isNaN(num)) ranges.push({ start: num, end: num });
+            }
+        }
+        
+        return ranges;
+    }
+    
+    // Download file with results display
+    function downloadFile(blob, filename, description) {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        
+        // Create result display
+        const resultDiv = document.createElement('div');
+        resultDiv.style.marginTop = '20px';
+        resultDiv.style.padding = '15px';
+        resultDiv.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-dark');
+        resultDiv.style.borderRadius = '4px';
+        
+        resultDiv.innerHTML = `
+            <h3 style="color: ${getComputedStyle(document.documentElement).getPropertyValue('--accent')}">Split Successful</h3>
+            <p>${description}</p>
+            <button id="downloadBtn" style="margin-top: 10px;">Download ${filename.endsWith('.zip') ? 'ZIP Archive' : 'PDF File'}</button>
+        `;
+        
+        // Remove previous result if exists
+        const previousResult = document.querySelector('#splitResult');
+        if (previousResult) {
+            previousResult.remove();
+        }
+        
+        resultDiv.id = 'splitResult';
+        pdfSplitterForm.after(resultDiv);
+        
+        // Trigger download
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+    }
+    
+    // Setup drag and drop for file upload
+    function setupDragAndDrop() {
+        const dropArea = document.getElementById('tool-split-pdf');
+        
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, preventDefaults, false);
+        });
+        
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropArea.addEventListener(eventName, highlight, false);
+        });
+        
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, unhighlight, false);
+        });
+        
+        function highlight() {
+            dropArea.style.border = '2px dashed ' + getComputedStyle(document.documentElement).getPropertyValue('--accent');
+        }
+        
+        function unhighlight() {
+            dropArea.style.border = 'none';
+        }
+        
+        dropArea.addEventListener('drop', function(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            
+            if (files.length) {
+                const file = files[0];
+                if (file.type === 'application/pdf') {
+                    pdfFileInput.files = files;
+                    // Trigger the change event
+                    const event = new Event('change');
+                    pdfFileInput.dispatchEvent(event);
+                } else {
+                    alert('Please drop a PDF file.');
+                }
+            }
+        });
+    }
+});
+    </script>
+</body>
+</html>

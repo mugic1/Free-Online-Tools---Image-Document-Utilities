@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Image - Free Online Image Cropper | Online Tools Hub</title>
+    <meta name="description" content="Crop your images online with ease. Select the area you want to keep and remove unwanted parts from your photos for free.">
+    <meta name="keywords" content="crop image, image cropper, online photo crop, free image crop tool, cut image">
+    <link rel="canonical" href="https://www.example.com/image-cropper">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #11244A;
+            --primary-dark: #0B1C3E;
+            --primary-darker: #061831;
+            --primary-darkest: #051024;
+            --background: #030A1C;
+            --text-light: #FFFFFF;
+            --text-muted: #CCCCCC;
+            --accent: #4A90E2;
+            --accent-hover: #3A7BC8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background-color: var(--background);
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--text-light);
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+        }
+        
+        em {
+            font-style: italic;
+            color: var(--text-muted);
+        }
+        
+        /* Layout */
+        header, main, footer {
+            padding: 2rem;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        header h1 a {
+            color: var(--text-light);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin-top: 1rem;
+            gap: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: var(--text-muted);
+            font-weight: 500;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+        }
+        
+        nav ul li a:hover {
+            color: var(--text-light);
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Tool Section */
+        #tool-crop-image {
+            background: var(--primary-darkest);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        #tool-crop-image h2 {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-dark);
+        }
+        
+        /* Form Styles */
+        form {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: var(--primary-darker);
+            border-radius: 8px;
+        }
+        
+        form div {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        input[type="file"],
+        input[type="number"] {
+            width: 100%;
+            padding: 0.8rem;
+            background: var(--primary-dark);
+            border: 1px solid var(--primary);
+            border-radius: 4px;
+            color: var(--text-light);
+        }
+        
+        input[type="file"] {
+            cursor: pointer;
+        }
+        
+        input[type="file"]:hover {
+            border-color: var(--accent);
+        }
+        
+        input[type="number"] {
+            max-width: 200px;
+        }
+        
+        /* Preview Area */
+        form p em {
+            display: block;
+            padding: 2rem;
+            background-color: var(--primary);
+            border: 2px dashed var(--accent);
+            border-radius: 8px;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+        
+        button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        button:hover {
+            background: var(--accent-hover);
+        }
+        
+        /* Articles */
+        article {
+            background: var(--primary-darker);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--accent);
+        }
+        
+        article h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        ol, ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-darkest);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        footer p {
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header, main, footer {
+                padding: 1.5rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            #tool-crop-image {
+                padding: 1.5rem;
+            }
+            
+            form {
+                padding: 1rem;
+            }
+            
+            input[type="number"] {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="/">Online Tools Hub</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/#image-tools">Image Tools</a></li>
+                <li><a href="/#document-text-tools">Document/Text Tools</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="tool-crop-image">
+            <h2>Online Image Cropper</h2>
+            <p>Upload your image and select the area you wish to crop. Our tool makes it easy to focus on the best parts of your photos.</p>
+
+            <form id="imageCropperForm" action="/crop-image-handler" method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="imageFileCrop">Choose image to crop:</label>
+                    <input type="file" id="imageFileCrop" name="imageFile" accept="image/*" required>
+                </div>
+                <p><em>[Interactive cropping area would appear here after upload]</em></p>
+                <div>
+                    <label for="cropX">X coordinate:</label>
+                    <input type="number" id="cropX" name="cropX" value="0">
+                </div>
+                <div>
+                    <label for="cropY">Y coordinate:</label>
+                    <input type="number" id="cropY" name="cropY" value="0">
+                </div>
+                <div>
+                    <label for="cropWidth">Width:</label>
+                    <input type="number" id="cropWidth" name="cropWidth" value="100">
+                </div>
+                <div>
+                    <label for="cropHeight">Height:</label>
+                    <input type="number" id="cropHeight" name="cropHeight" value="100">
+                </div>
+                <button type="submit">Crop Image</button>
+            </form>
+
+            <article id="how-to-use">
+                <h3>How to Crop Your Image:</h3>
+                <ol>
+                    <li>Upload the image you want to crop.</li>
+                    <li>Adjust the selection box over the area you want to keep (or input coordinates).</li>
+                    <li>Click "Crop Image".</li>
+                    <li>Download your newly cropped image.</li>
+                </ol>
+            </article>
+
+            <article id="features">
+                <h3>Features:</h3>
+                <ul>
+                    <li>Easy-to-use cropping interface (visual selection recommended with JS).</li>
+                    <li>Supports common image formats.</li>
+                    <li>Preview your crop before finalizing.</li>
+                    <li>Free and fast.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Online Tools Hub. All rights reserved.</p>
+        <p><a href="/#image-tools">Back to Image Tools</a> | <a href="/index.html">Home</a></p>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    const imageCropperForm = document.getElementById('imageCropperForm');
+    const imageFileInput = document.getElementById('imageFileCrop');
+    const cropXInput = document.getElementById('cropX');
+    const cropYInput = document.getElementById('cropY');
+    const cropWidthInput = document.getElementById('cropWidth');
+    const cropHeightInput = document.getElementById('cropHeight');
+    const previewPlaceholder = document.querySelector('#imageCropperForm p em');
+    
+    // Variables for cropping functionality
+    let originalImage = null;
+    let cropperInstance = null;
+    let previewContainer = null;
+    
+    // Handle form submission
+    imageCropperForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        if (!originalImage) {
+            alert('Please select an image file first.');
+            return;
+        }
+        
+        // Get crop coordinates
+        const x = parseInt(cropXInput.value) || 0;
+        const y = parseInt(cropYInput.value) || 0;
+        const width = parseInt(cropWidthInput.value) || 100;
+        const height = parseInt(cropHeightInput.value) || 100;
+        
+        // Validate crop area
+        if (x < 0 || y < 0 || width <= 0 || height <= 0) {
+            alert('Please enter valid crop dimensions (positive numbers).');
+            return;
+        }
+        
+        if (x + width > originalImage.width || y + height > originalImage.height) {
+            alert('Crop area exceeds image dimensions.');
+            return;
+        }
+        
+        // Perform the crop
+        cropImage(originalImage, x, y, width, height);
+    });
+    
+    // When image is selected
+    imageFileInput.addEventListener('change', function() {
+        const file = this.files[0];
+        if (!file) return;
+        
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            // Create image element
+            const img = new Image();
+            img.onload = function() {
+                originalImage = img;
+                
+                // Remove previous cropper if exists
+                if (cropperInstance) {
+                    cropperInstance.destroy();
+                }
+                
+                // Remove previous preview container if exists
+                if (previewContainer) {
+                    previewPlaceholder.parentNode.replaceChild(previewPlaceholder, previewContainer);
+                }
+                
+                // Create preview container
+                previewContainer = document.createElement('div');
+                previewContainer.style.position = 'relative';
+                previewContainer.style.maxWidth = '100%';
+                previewContainer.style.height = 'auto';
+                previewContainer.style.margin = '1.5rem 0';
+                
+                // Create image element for cropper
+                const previewImg = document.createElement('img');
+                previewImg.src = event.target.result;
+                previewImg.style.maxWidth = '100%';
+                previewImg.style.height = 'auto';
+                previewImg.style.display = 'block';
+                
+                // Replace placeholder with preview container
+                previewContainer.appendChild(previewImg);
+                previewPlaceholder.parentNode.replaceChild(previewContainer, previewPlaceholder);
+                
+                // Initialize Cropper.js
+                cropperInstance = new Cropper(previewImg, {
+                    aspectRatio: NaN, // Free ratio
+                    viewMode: 1,
+                    autoCropArea: 0.8,
+                    responsive: true,
+                    crop: function(event) {
+                        // Update form inputs with crop data
+                        cropXInput.value = Math.round(event.detail.x);
+                        cropYInput.value = Math.round(event.detail.y);
+                        cropWidthInput.value = Math.round(event.detail.width);
+                        cropHeightInput.value = Math.round(event.detail.height);
+                    }
+                });
+            };
+            img.src = event.target.result;
+        };
+        reader.readAsDataURL(file);
+    });
+    
+    // Input validation for crop dimensions
+    [cropXInput, cropYInput, cropWidthInput, cropHeightInput].forEach(input => {
+        input.addEventListener('input', function() {
+            if (this.value < 0) this.value = 0;
+            if (cropperInstance && originalImage) {
+                // Update cropper position when inputs change
+                const x = parseInt(cropXInput.value) || 0;
+                const y = parseInt(cropYInput.value) || 0;
+                const width = parseInt(cropWidthInput.value) || 100;
+                const height = parseInt(cropHeightInput.value) || 100;
+                
+                cropperInstance.setData({
+                    x: x,
+                    y: y,
+                    width: width,
+                    height: height
+                });
+            }
+        });
+    });
+    
+    // Drag and drop functionality
+    const dropArea = document.getElementById('tool-crop-image');
+    
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, preventDefaults, false);
+    });
+    
+    function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    
+    ['dragenter', 'dragover'].forEach(eventName => {
+        dropArea.addEventListener(eventName, highlight, false);
+    });
+    
+    ['dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, unhighlight, false);
+    });
+    
+    function highlight() {
+        dropArea.style.border = '2px dashed ' + getComputedStyle(document.documentElement).getPropertyValue('--accent');
+    }
+    
+    function unhighlight() {
+        dropArea.style.border = 'none';
+    }
+    
+    dropArea.addEventListener('drop', handleDrop, false);
+    
+    function handleDrop(e) {
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        
+        if (files.length) {
+            const file = files[0];
+            if (file.type.match('image.*')) {
+                imageFileInput.files = files;
+                // Trigger the change event
+                const event = new Event('change');
+                imageFileInput.dispatchEvent(event);
+            } else {
+                alert('Please drop an image file.');
+            }
+        }
+    }
+    
+    // Image cropping function
+    function cropImage(img, x, y, width, height) {
+        // Create canvas
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Set canvas dimensions to crop size
+        canvas.width = width;
+        canvas.height = height;
+        
+        // Draw the cropped portion
+        ctx.drawImage(img, x, y, width, height, 0, 0, width, height);
+        
+        // Create download link
+        canvas.toBlob(function(blob) {
+            const downloadLink = document.createElement('a');
+            downloadLink.href = URL.createObjectURL(blob);
+            downloadLink.download = 'cropped_' + imageFileInput.files[0].name;
+            
+            // Display results
+            const resultDiv = document.createElement('div');
+            resultDiv.style.marginTop = '20px';
+            resultDiv.style.padding = '15px';
+            resultDiv.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-dark');
+            resultDiv.style.borderRadius = '4px';
+            
+            resultDiv.innerHTML = `
+                <h3 style="color: ${getComputedStyle(document.documentElement).getPropertyValue('--accent')}">Crop Results</h3>
+                <p>Cropped area: ${width} × ${height} pixels</p>
+                <button id="downloadBtn" style="margin-top: 10px;">Download Cropped Image</button>
+            `;
+            
+            // Remove previous result if exists
+            const previousResult = document.querySelector('#cropResult');
+            if (previousResult) {
+                previousResult.remove();
+            }
+            
+            resultDiv.id = 'cropResult';
+            imageCropperForm.after(resultDiv);
+            
+            // Add download functionality
+            document.getElementById('downloadBtn').addEventListener('click', function() {
+                downloadLink.click();
+            });
+        }, imageFileInput.files[0].type, 0.9); // Use original file type and 90% quality
+    }
+    
+    // Load Cropper.js library dynamically if not already loaded
+    if (typeof Cropper === 'undefined') {
+        const cropperCSS = document.createElement('link');
+        cropperCSS.rel = 'stylesheet';
+        cropperCSS.href = 'https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css';
+        document.head.appendChild(cropperCSS);
+        
+        const cropperJS = document.createElement('script');
+        cropperJS.src = 'https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js';
+        cropperJS.onload = function() {
+            // Reinitialize if an image was already selected
+            if (imageFileInput.files.length > 0) {
+                const event = new Event('change');
+                imageFileInput.dispatchEvent(event);
+            }
+        };
+        document.body.appendChild(cropperJS);
+    }
+});
+    </script>
+</body>
+</html>

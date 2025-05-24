@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Online Tools - Image & Document Utilities</title>
+    <meta name="description" content="Your one-stop shop for free online image tools like compress, resize, crop, and convert, plus document/text tools including PDF merge/split, word counter, and JSON formatter.">
+    <meta name="keywords" content="image compressor, resize image, crop image, convert image, online image tools, PDF merger, PDF splitter, word counter, JSON formatter, online document tools, free tools">
+    <link rel="canonical" href="https://www.example.com/">
+    <!-- Favicon (basic version) -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- PWA Basics -->
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#11244A">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #11244A;
+            --primary-dark: #0B1C3E;
+            --primary-darker: #061831;
+            --primary-darkest: #051024;
+            --background: #030A1C;
+            --text-light: #FFFFFF;
+            --text-muted: #CCCCCC;
+            --accent: #4A90E2;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background-color: var(--background);
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--text-light);
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        /* Layout */
+        header, main, footer {
+            padding: 2rem;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        header h1 a {
+            color: var(--text-light);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        nav ul li {
+            margin-right: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: var(--text-muted);
+            font-weight: 500;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+        }
+        
+        nav ul li a:hover {
+            color: var(--text-light);
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-darker));
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        #hero h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        #hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Tool Sections */
+        section {
+            margin-bottom: 3rem;
+        }
+        
+        section h2 {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-dark);
+        }
+        
+        section p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+        
+        /* Tool Cards - UPDATED FOR CLICKABLE CARDS */
+        ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            list-style: none;
+        }
+        
+        li a.card-link {
+            display: block;
+            height: 100%;
+            color: inherit;
+        }
+        
+        li a.card-link:hover {
+            text-decoration: none;
+        }
+        
+        li article {
+            background: var(--primary-darkest);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            border-left: 4px solid var(--accent);
+        }
+        
+        li a.card-link:hover article {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        li article h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-light);
+        }
+        
+        li article p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        
+        /* Why Choose Us Section */
+        #why-choose-us ul {
+            display: block;
+        }
+        
+        #why-choose-us ul li {
+            background: var(--primary-darkest);
+            padding: 1rem 1.5rem;
+            margin-bottom: 0.8rem;
+            border-radius: 6px;
+        }
+        
+        #why-choose-us ul li strong {
+            color: var(--accent);
+        }
+        
+        /* Horizontal Rule */
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--primary), transparent);
+            margin: 3rem 0;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-darkest);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header, main, footer {
+                padding: 1.5rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+        
+            nav ul li {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+            
+            #hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            #hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="/">Online Tools Hub</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#image-tools">Image Tools</a></li>
+                <li><a href="#document-text-tools">Document/Text Tools</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>Welcome to Your Free Online Utilities!</h2>
+            <p>Quickly and easily manage your images and documents with our suite of powerful online tools. No downloads, no sign-ups, just simple and effective solutions.</p>
+        </section>
+
+        <section id="image-tools">
+            <h2>Image Tools</h2>
+            <p>Optimize and transform your images effortlessly. Compress for web, resize for social media, crop for focus, or convert to the perfect format.</p>
+            <ul>
+                <li>
+                    <a href="/compress-image.html" title="Compress Images Online" class="card-link">
+                        <article>
+                            <h3>Compress Image</h3>
+                            <p>Reduce image file size without significant loss of quality. Perfect for web optimization.</p>
+                        </article>
+                    </a>
+                </li>
+                <li>
+                    <a href="/resize-image.html" title="Resize Images Online" class="card-link">
+                        <article>
+                            <h3>Resize Image</h3>
+                            <p>Change the dimensions of your images to fit any requirement.</p>
+                        </article>
+                    </a>
+                </li>
+                <li>
+                    <a href="/crop-image.html" title="Crop Images Online" class="card-link">
+                        <article>
+                            <h3>Crop Image</h3>
+                            <p>Cut out unwanted areas or focus on a specific part of your image.</p>
+                        </article>
+                    </a>
+                </li>
+                <li>
+                    <a href="/convert-image.html" title="Convert Image Formats Online" class="card-link">
+                        <article>
+                            <h3>Convert Image Formats</h3>
+                            <p>Switch between popular image formats like JPG, PNG, WEBP, GIF, etc.</p>
+                        </article>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="document-text-tools">
+            <h2>Document &amp; Text Tools</h2>
+            <p>Streamline your document workflows and text processing tasks. Merge or split PDFs, count words, and format JSON with ease.</p>
+            <ul>
+                <li>
+                    <a href="/merge-pdf.html" title="Merge PDF Files Online" class="card-link">
+                        <article>
+                            <h3>Merge PDFs</h3>
+                            <p>Combine multiple PDF files into a single document.</p>
+                        </article>
+                    </a>
+                </li>
+                <li>
+                    <a href="/split-pdf.html" title="Split PDF Files Online" class="card-link">
+                        <article>
+                            <h3>Split PDF</h3>
+                            <p>Divide a PDF into multiple smaller files or extract specific pages.</p>
+                        </article>
+                    </a>
+                </li>
+                <li>
+                    <a href="/word-counter.html" title="Online Word Counter" class="card-link">
+                        <article>
+                            <h3>Word Counter</h3>
+                            <p>Count words, characters, sentences, and paragraphs in your text.</p>
+                        </article>
+                    </a>
+                </li>
+                <li>
+                    <a href="/format-json.html" title="Online JSON Formatter & Validator" class="card-link">
+                        <article>
+                            <h3>Format JSON</h3>
+                            <p>Validate, format, and beautify your JSON data for better readability.</p>
+                        </article>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="why-choose-us">
+             <h2>Why Use Our Online Tools?</h2>
+             <ul>
+                 <li><strong>Free to Use:</strong> All our tools are completely free.</li>
+                 <li><strong>No Registration Required:</strong> Access tools instantly without any sign-up 📄.</li>
+                 <li><strong>User-Friendly:</strong> Simple and intuitive interfaces for everyone 🥰.</li>
+                 <li><strong>Secure:</strong> We respect your privacy; files are processed securely directly on your browser without reaching any server 😊.</li>
+                 <li><strong>Cross-Platform:</strong> Accessible from any device with a web browser 🌐.</li>
+             </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Website Name. All rights reserved.</p>
+    </footer>
+    
+    <button id="installBtn" style="display:none;">Install App</button>
+
+<script>
+  // Show install button when PWA can be installed
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    const installBtn = document.getElementById('installBtn');
+    installBtn.style.display = 'block';
+    
+    installBtn.addEventListener('click', () => {
+      e.prompt();
+      e.userChoice.then(() => {
+        installBtn.style.display = 'none';
+      });
+    });
+  });
+  
+  // Register service worker
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js');
+    });
+  }
+</script>
+</body>
+</html>

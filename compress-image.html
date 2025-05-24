@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compress Image - Free Online Image Compressor | Online Tools Hub</title>
+    <meta name="description" content="Reduce the file size of your JPG, PNG, GIF images online for free. Our image compressor helps you optimize images for web and storage without significant quality loss.">
+    <meta name="keywords" content="compress image, image optimizer, reduce image size, jpg compressor, png compressor, gif compressor, free image compression">
+    <link rel="canonical" href="https://www.example.com/image-compressor">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #11244A;
+            --primary-dark: #0B1C3E;
+            --primary-darker: #061831;
+            --primary-darkest: #051024;
+            --background: #030A1C;
+            --text-light: #FFFFFF;
+            --text-muted: #CCCCCC;
+            --accent: #4A90E2;
+            --accent-hover: #3A7BC8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background-color: var(--background);
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--text-light);
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+        }
+        
+        /* Layout */
+        header, main, footer {
+            padding: 2rem;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        header h1 a {
+            color: var(--text-light);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin-top: 1rem;
+            gap: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: var(--text-muted);
+            font-weight: 500;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+        }
+        
+        nav ul li a:hover {
+            color: var(--text-light);
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Tool Section */
+        #tool-compress-image {
+            background: var(--primary-darkest);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        #tool-compress-image h2 {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-dark);
+        }
+        
+        /* Form Styles */
+        form {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: var(--primary-darker);
+            border-radius: 8px;
+        }
+        
+        form div {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        input[type="file"],
+        input[type="number"] {
+            width: 100%;
+            padding: 0.8rem;
+            background: var(--primary-dark);
+            border: 1px solid var(--primary);
+            border-radius: 4px;
+            color: var(--text-light);
+        }
+        
+        input[type="file"] {
+            cursor: pointer;
+        }
+        
+        input[type="file"]:hover {
+            border-color: var(--accent);
+        }
+        
+        input[type="number"] {
+            max-width: 200px;
+        }
+        
+        button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        button:hover {
+            background: var(--accent-hover);
+        }
+        
+        /* Articles */
+        article {
+            background: var(--primary-darker);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--accent);
+        }
+        
+        article h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        ol, ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-darkest);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        footer p {
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header, main, footer {
+                padding: 1.5rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            #tool-compress-image {
+                padding: 1.5rem;
+            }
+            
+            form {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="/">Online Tools Hub</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/#image-tools">Image Tools</a></li>
+                <li><a href="/#document-text-tools">Document/Text Tools</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="tool-compress-image">
+            <h2>Online Image Compressor</h2>
+            <p>Upload your image (JPG, PNG, GIF) to reduce its file size. Select your desired compression level for the best balance between size and quality.</p>
+
+            <form id="imageCompressorForm" action="/compress-image-handler" method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="imageFile">Choose image to compress:</label>
+                    <input type="file" id="imageFile" name="imageFile" accept="image/jpeg, image/png, image/gif" required>
+                </div>
+                <div>
+                    <label for="compressionLevel">Compression Level (e.g., 0.8 for 80% quality):</label>
+                    <input type="number" id="compressionLevel" name="compressionLevel" min="0.1" max="1" step="0.1" value="0.8">
+                </div>
+                <button type="submit">Compress Image</button>
+            </form>
+
+            <article id="how-to-use">
+                <h3>How to Compress Your Image:</h3>
+                <ol>
+                    <li>Click "Choose image to compress" or drag and drop your file.</li>
+                    <li>Adjust the compression level if needed.</li>
+                    <li>Click the "Compress Image" button.</li>
+                    <li>Download your optimized image.</li>
+                </ol>
+            </article>
+
+            <article id="features">
+                <h3>Features:</h3>
+                <ul>
+                    <li>Supports JPG, PNG, and GIF formats.</li>
+                    <li>Adjustable compression levels.</li>
+                    <li>Fast and easy to use.</li>
+                    <li>Securely processes your files.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Online Tools Hub. All rights reserved.</p>
+        <p><a href="/#image-tools">Back to Image Tools</a> | <a href="/index.html">Home</a></p>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    const imageCompressorForm = document.getElementById('imageCompressorForm');
+    const imageFileInput = document.getElementById('imageFile');
+    const compressionLevelInput = document.getElementById('compressionLevel');
+    
+    // Handle form submission
+    imageCompressorForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const file = imageFileInput.files[0];
+        const compressionLevel = parseFloat(compressionLevelInput.value);
+        
+        if (!file) {
+            alert('Please select an image file first.');
+            return;
+        }
+        
+        if (isNaN(compressionLevel) || compressionLevel < 0.1 || compressionLevel > 1) {
+            alert('Please enter a valid compression level between 0.1 and 1.');
+            return;
+        }
+        
+        compressImage(file, compressionLevel);
+    });
+    
+    // Drag and drop functionality
+    const dropArea = document.getElementById('tool-compress-image');
+    
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, preventDefaults, false);
+    });
+    
+    function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    
+    ['dragenter', 'dragover'].forEach(eventName => {
+        dropArea.addEventListener(eventName, highlight, false);
+    });
+    
+    ['dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, unhighlight, false);
+    });
+    
+    function highlight() {
+        dropArea.style.border = '2px dashed ' + getComputedStyle(document.documentElement).getPropertyValue('--accent');
+    }
+    
+    function unhighlight() {
+        dropArea.style.border = 'none';
+    }
+    
+    dropArea.addEventListener('drop', handleDrop, false);
+    
+    function handleDrop(e) {
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        
+        if (files.length) {
+            const file = files[0];
+            if (file.type.match('image.*')) {
+                imageFileInput.files = files;
+                // Optional: Display the file name
+                const fileNameDisplay = document.createElement('p');
+                fileNameDisplay.textContent = `Selected file: ${file.name}`;
+                fileNameDisplay.style.marginTop = '10px';
+                fileNameDisplay.style.color = getComputedStyle(document.documentElement).getPropertyValue('--text-muted');
+                
+                const existingFileName = imageFileInput.nextElementSibling;
+                if (existingFileName && existingFileName.tagName === 'P') {
+                    existingFileName.remove();
+                }
+                
+                imageFileInput.after(fileNameDisplay);
+            } else {
+                alert('Please drop an image file (JPG, PNG, GIF).');
+            }
+        }
+    }
+    
+    // Image compression function
+    function compressImage(file, quality) {
+        const reader = new FileReader();
+        
+        reader.onload = function(event) {
+            const img = new Image();
+            img.onload = function() {
+                // Create canvas
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Determine the image type
+                let mimeType = 'image/jpeg';
+                if (file.type === 'image/png') {
+                    mimeType = 'image/png';
+                } else if (file.type === 'image/gif') {
+                    mimeType = 'image/gif';
+                }
+                
+                // Set canvas dimensions
+                canvas.width = img.width;
+                canvas.height = img.height;
+                
+                // Draw image on canvas
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                
+                // Compress the image
+                canvas.toBlob(function(blob) {
+                    // Create download link
+                    const downloadLink = document.createElement('a');
+                    downloadLink.href = URL.createObjectURL(blob);
+                    downloadLink.download = 'compressed_' + file.name;
+                    
+                    // Display compressed image info
+                    const originalSize = (file.size / 1024).toFixed(2);
+                    const compressedSize = (blob.size / 1024).toFixed(2);
+                    const compressionRatio = ((1 - (blob.size / file.size)) * 100).toFixed(2);
+                    
+                    const resultDiv = document.createElement('div');
+                    resultDiv.style.marginTop = '20px';
+                    resultDiv.style.padding = '15px';
+                    resultDiv.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-dark');
+                    resultDiv.style.borderRadius = '4px';
+                    
+                    resultDiv.innerHTML = `
+                        <h3 style="color: ${getComputedStyle(document.documentElement).getPropertyValue('--accent')}">Compression Results</h3>
+                        <p>Original size: ${originalSize} KB</p>
+                        <p>Compressed size: ${compressedSize} KB</p>
+                        <p>Reduction: ${compressionRatio}%</p>
+                        <button id="downloadBtn" style="margin-top: 10px;">Download Compressed Image</button>
+                    `;
+                    
+                    // Remove previous result if exists
+                    const previousResult = document.querySelector('#compressionResult');
+                    if (previousResult) {
+                        previousResult.remove();
+                    }
+                    
+                    resultDiv.id = 'compressionResult';
+                    imageCompressorForm.after(resultDiv);
+                    
+                    // Add download functionality
+                    document.getElementById('downloadBtn').addEventListener('click', function() {
+                        downloadLink.click();
+                    });
+                    
+                }, mimeType, quality);
+            };
+            
+            img.src = event.target.result;
+        };
+        
+        reader.readAsDataURL(file);
+    }
+    
+    // Input validation for compression level
+    compressionLevelInput.addEventListener('input', function() {
+        let value = parseFloat(this.value);
+        
+        if (isNaN(value)) {
+            this.value = 0.8;
+        } else if (value < 0.1) {
+            this.value = 0.1;
+        } else if (value > 1) {
+            this.value = 1;
+        }
+    });
+});
+    </script>
+</body>
+</html>

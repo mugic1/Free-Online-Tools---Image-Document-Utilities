@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Image Formats - Free Online Image Converter | Online Tools Hub</title>
+    <meta name="description" content="Convert your images between various formats like JPG, PNG, WEBP, GIF, BMP, TIFF online for free. Fast and easy image file conversion.">
+    <meta name="keywords" content="convert image, image converter, jpg to png, png to jpg, webp converter, gif converter, image format changer, free image converter">
+    <link rel="canonical" href="https://www.example.com/image-converter">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #11244A;
+            --primary-dark: #0B1C3E;
+            --primary-darker: #061831;
+            --primary-darkest: #051024;
+            --background: #030A1C;
+            --text-light: #FFFFFF;
+            --text-muted: #CCCCCC;
+            --accent: #4A90E2;
+            --accent-hover: #3A7BC8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background-color: var(--background);
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--text-light);
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+        }
+        
+        /* Layout */
+        header, main, footer {
+            padding: 2rem;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        header h1 a {
+            color: var(--text-light);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin-top: 1rem;
+            gap: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: var(--text-muted);
+            font-weight: 500;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+        }
+        
+        nav ul li a:hover {
+            color: var(--text-light);
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Tool Section */
+        #tool-convert-image {
+            background: var(--primary-darkest);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        #tool-convert-image h2 {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-dark);
+        }
+        
+        /* Form Styles */
+        form {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: var(--primary-darker);
+            border-radius: 8px;
+        }
+        
+        form div {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        input[type="file"],
+        select {
+            width: 100%;
+            padding: 0.8rem;
+            background: var(--primary-dark);
+            border: 1px solid var(--primary);
+            border-radius: 4px;
+            color: var(--text-light);
+        }
+        
+        input[type="file"] {
+            cursor: pointer;
+        }
+        
+        input[type="file"]:hover {
+            border-color: var(--accent);
+        }
+        
+        select {
+            max-width: 300px;
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234A90E2'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0.7rem center;
+            background-size: 1rem;
+        }
+        
+        select:hover {
+            border-color: var(--accent);
+        }
+        
+        button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        button:hover {
+            background: var(--accent-hover);
+        }
+        
+        /* Articles */
+        article {
+            background: var(--primary-darker);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--accent);
+        }
+        
+        article h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        ol, ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-darkest);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        footer p {
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header, main, footer {
+                padding: 1.5rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            #tool-convert-image {
+                padding: 1.5rem;
+            }
+            
+            form {
+                padding: 1rem;
+            }
+            
+            select {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="/">Online Tools Hub</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/#image-tools">Image Tools</a></li>
+                <li><a href="/#document-text-tools">Document/Text Tools</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="tool-convert-image">
+            <h2>Online Image Format Converter</h2>
+            <p>Upload your image and choose the desired output format to convert it instantly.</p>
+
+            <form id="imageConverterForm" action="/convert-image-handler" method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="imageFileConvert">Choose image to convert:</label>
+                    <input type="file" id="imageFileConvert" name="imageFile" accept="image/*" required>
+                </div>
+                <div>
+                    <label for="outputFormat">Convert to:</label>
+                    <select id="outputFormat" name="outputFormat">
+                        <option value="jpg">JPG</option>
+                        <option value="png">PNG</option>
+                        <option value="webp">WEBP</option>
+                        <option value="gif">GIF</option>
+                        <option value="bmp">BMP</option>
+                        <option value="tiff">TIFF</option>
+                    </select>
+                </div>
+                <button type="submit">Convert Image</button>
+            </form>
+
+            <article id="how-to-use">
+                <h3>How to Convert Your Image:</h3>
+                <ol>
+                    <li>Upload the image file.</li>
+                    <li>Select the target format from the dropdown menu.</li>
+                    <li>Click "Convert Image".</li>
+                    <li>Download your converted image.</li>
+                </ol>
+            </article>
+
+            <article id="features">
+                <h3>Supported Formats:</h3>
+                <ul>
+                    <li>Input: JPG, PNG, GIF, WEBP, BMP, TIFF, and more.</li>
+                    <li>Output: JPG, PNG, WEBP, GIF, BMP, TIFF.</li>
+                    <li>High-quality conversion.</li>
+                    <li>Batch conversion (optional feature).</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Online Tools Hub. All rights reserved.</p>
+        <p><a href="/#image-tools">Back to Image Tools</a> | <a href="/index.html">Home</a></p>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    const imageConverterForm = document.getElementById('imageConverterForm');
+    const imageFileInput = document.getElementById('imageFileConvert');
+    const outputFormatSelect = document.getElementById('outputFormat');
+    
+    // Handle form submission
+    imageConverterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const file = imageFileInput.files[0];
+        
+        if (!file) {
+            alert('Please select an image file first.');
+            return;
+        }
+        
+        const outputFormat = outputFormatSelect.value;
+        convertImage(file, outputFormat);
+    });
+    
+    // Drag and drop functionality
+    const dropArea = document.getElementById('tool-convert-image');
+    
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, preventDefaults, false);
+    });
+    
+    function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    
+    ['dragenter', 'dragover'].forEach(eventName => {
+        dropArea.addEventListener(eventName, highlight, false);
+    });
+    
+    ['dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, unhighlight, false);
+    });
+    
+    function highlight() {
+        dropArea.style.border = '2px dashed ' + getComputedStyle(document.documentElement).getPropertyValue('--accent');
+    }
+    
+    function unhighlight() {
+        dropArea.style.border = 'none';
+    }
+    
+    dropArea.addEventListener('drop', handleDrop, false);
+    
+    function handleDrop(e) {
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        
+        if (files.length) {
+            const file = files[0];
+            if (file.type.match('image.*')) {
+                imageFileInput.files = files;
+                
+                // Optional: Display the file name
+                const fileNameDisplay = document.createElement('p');
+                fileNameDisplay.textContent = `Selected file: ${file.name}`;
+                fileNameDisplay.style.marginTop = '10px';
+                fileNameDisplay.style.color = getComputedStyle(document.documentElement).getPropertyValue('--text-muted');
+                
+                const existingFileName = imageFileInput.nextElementSibling;
+                if (existingFileName && existingFileName.tagName === 'P') {
+                    existingFileName.remove();
+                }
+                
+                imageFileInput.after(fileNameDisplay);
+            } else {
+                alert('Please drop an image file.');
+            }
+        }
+    }
+    
+    // Image conversion function
+    function convertImage(file, targetFormat) {
+        const reader = new FileReader();
+        
+        reader.onload = function(event) {
+            const img = new Image();
+            img.onload = function() {
+                // Create canvas
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Set canvas dimensions
+                canvas.width = img.width;
+                canvas.height = img.height;
+                
+                // Draw image on canvas
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                
+                // Determine MIME type
+                let mimeType;
+                switch(targetFormat) {
+                    case 'jpg':
+                    case 'jpeg':
+                        mimeType = 'image/jpeg';
+                        break;
+                    case 'png':
+                        mimeType = 'image/png';
+                        break;
+                    case 'webp':
+                        mimeType = 'image/webp';
+                        break;
+                    case 'gif':
+                        mimeType = 'image/gif';
+                        break;
+                    case 'bmp':
+                        mimeType = 'image/bmp';
+                        break;
+                    case 'tiff':
+                        mimeType = 'image/tiff';
+                        break;
+                    default:
+                        mimeType = 'image/jpeg';
+                }
+                
+                // Convert the image
+                canvas.toBlob(function(blob) {
+                    // Create download link
+                    const downloadLink = document.createElement('a');
+                    downloadLink.href = URL.createObjectURL(blob);
+                    
+                    // Generate new filename with correct extension
+                    const originalName = file.name.split('.')[0];
+                    downloadLink.download = `${originalName}.${targetFormat}`;
+                    
+                    // Display conversion info
+                    const originalFormat = file.name.split('.').pop().toLowerCase();
+                    const originalSize = (file.size / 1024).toFixed(2);
+                    const convertedSize = (blob.size / 1024).toFixed(2);
+                    
+                    const resultDiv = document.createElement('div');
+                    resultDiv.style.marginTop = '20px';
+                    resultDiv.style.padding = '15px';
+                    resultDiv.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-dark');
+                    resultDiv.style.borderRadius = '4px';
+                    
+                    resultDiv.innerHTML = `
+                        <h3 style="color: ${getComputedStyle(document.documentElement).getPropertyValue('--accent')}">Conversion Results</h3>
+                        <p>Converted from ${originalFormat.toUpperCase()} to ${targetFormat.toUpperCase()}</p>
+                        <p>Original size: ${originalSize} KB</p>
+                        <p>Converted size: ${convertedSize} KB</p>
+                        <button id="downloadBtn" style="margin-top: 10px;">Download Converted Image</button>
+                    `;
+                    
+                    // Remove previous result if exists
+                    const previousResult = document.querySelector('#conversionResult');
+                    if (previousResult) {
+                        previousResult.remove();
+                    }
+                    
+                    resultDiv.id = 'conversionResult';
+                    imageConverterForm.after(resultDiv);
+                    
+                    // Add download functionality
+                    document.getElementById('downloadBtn').addEventListener('click', function() {
+                        downloadLink.click();
+                    });
+                    
+                }, mimeType, 0.92); // 0.92 quality for formats that support it
+            };
+            
+            img.src = event.target.result;
+        };
+        
+        reader.readAsDataURL(file);
+    }
+    
+    // Optional: Show file info when selected
+    imageFileInput.addEventListener('change', function() {
+        if (this.files.length) {
+            const file = this.files[0];
+            const fileInfo = document.createElement('p');
+            fileInfo.textContent = `Selected: ${file.name} (${(file.size / 1024).toFixed(2)} KB)`;
+            fileInfo.style.marginTop = '10px';
+            fileInfo.style.color = getComputedStyle(document.documentElement).getPropertyValue('--text-muted');
+            
+            const existingInfo = this.nextElementSibling;
+            if (existingInfo && existingInfo.tagName === 'P') {
+                existingInfo.remove();
+            }
+            
+            this.after(fileInfo);
+        }
+    });
+});
+    </script>
+</body>
+</html>
